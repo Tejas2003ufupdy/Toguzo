@@ -63,7 +63,7 @@ const StackNavigator = () => {
         options={{
           tabBarLabel: "MyGroups",
           tabBarLabelStyle: {color: "#008E97"},
-          headerShown: false,
+          headerShown: true,
           tabBarIcon: ({ focused }) =>
             focused ? (
               <GroupIconActive name="MyGroups" width={24}  />
