@@ -1,10 +1,7 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
-import SvgUri from "react-native-svg";
 import ProgressBar from "react-native-progress/Bar";
 import ArrowPR from "../../assets/images/MyGroupsPage/ArrowPR.svg";
-import Avatar1 from "../../assets/images/MyGroupsPage/Avatar1";
-import Avatar2 from "../../assets/images/MyGroupsPage/Avatar2";
 
 const MyGroupsC2 = () => {
   return (
@@ -12,8 +9,6 @@ const MyGroupsC2 = () => {
       <View style={styles.container}>
         <View style={styles.header}>
           <View style={styles.headerLeft}>
-            {/* <Avatar1 />
-            <Avatar2 /> */}
             <View
               style={{
                 borderRadius: 20,
