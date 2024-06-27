@@ -18,7 +18,7 @@ import Banner from '../../components/HomePage/Banner';
 import Promotedproducts from '../../components/HomePage/Promotedproducts';
 import ProductsItems from '../../components/HomePage/ProductsItems'
 import FilterSection from '../../components/HomePage/FilterSection'
-import AppLoading from 'expo-app-loading'
+// import AppLoading from 'expo-app-loading'
 import { useFonts } from 'expo-font'
 
 const HomeScreen = () => {
@@ -29,9 +29,9 @@ const HomeScreen = () => {
 
   })
 
-  if (!fontsLoaded) {
-    return <AppLoading />
-  }
+  // if (!fontsLoaded) {
+  //   return <AppLoading />
+  // }
 
   const navigation = useNavigation();
   const [modalVisible, setModalVisible] = useState(false);
