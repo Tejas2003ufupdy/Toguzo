@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TextInput, ScrollView, StyleSheet, Pressable } from 'react-native'
+import { View, Text, SafeAreaView, TextInput, ScrollView, StyleSheet, Pressable, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import { BottomModal, SlideAnimation, ModalContent, ModalPortal } from 'react-native-modals'
 import Microphone from '../../assets/images/Mainpage/Microphone.svg'
@@ -20,6 +20,8 @@ import ProductsItems from '../../components/HomePage/ProductsItems'
 import FilterSection from '../../components/HomePage/FilterSection'
 // import AppLoading from 'expo-app-loading'
 import { useFonts } from 'expo-font'
+
+const screenWidth = Dimensions.get('window').width
 
 const HomeScreen = () => {
   let [fontsLoaded] = useFonts({
@@ -73,21 +75,30 @@ const HomeScreen = () => {
             borderColor: '#F2F3F3',
             height: 1,
             borderWidth: 3,
+            backgroundColor: '#F2F3F3'
           }} />
           <Products />
           <Text style={{
             borderColor: '#F2F3F3',
             height: 1,
             borderWidth: 3,
+            backgroundColor: '#F2F3F3'
           }} />
           <BrandCar />
           <Text style={{
             borderColor: '#F2F3F3',
             height: 1,
             borderWidth: 3,
+            backgroundColor: '#F2F3F3'
           }} />
           <Banner />
           <Promotedproducts />
+          <Text style={{
+            borderColor: '#F2F3F3',
+            height: 1,
+            borderWidth: 3,
+            backgroundColor: '#F2F3F3'
+          }} />
           <FilterSection />
           <ProductsItems />
           <Text>Loading..</Text>
@@ -107,7 +118,7 @@ const HomeScreen = () => {
         onTouchOutside={() => {
           setModalVisible(!modalVisible)
         }}>
-        <ModalContent style={{ width: "100%", height: 425 }}>
+        <ModalContent style={{ width: "100%", height: 386 }}>
           <View style={{ height: 48, alignItems: 'center', flexDirection: 'row', }}>
             <View style={{ alignItems: 'center', flexDirection: 'row', gap: 5, flex: 1, height: 48 }}>
               <View style={{ width: 48, height: 48, alignItems: 'center', justifyContent: 'center' }}>
@@ -142,22 +153,22 @@ const HomeScreen = () => {
                 <Text style={{ color: '#347B72', fontSize: 12, fontWeight: '600', fontFamily: 'Nunito-Medium' }}>Privacy Policy</Text>
               </View>
             </View>
-            <View style={styles.ButtonTop}>
-              <Pressable
-                style={{
-                  backgroundColor: '#347B72',
-                  borderRadius: 10,
-                  padding: 12,
-                  alignItems: 'center',
-                }}
-                onPress={() => {
-                  navigation.navigate("OTPScreen");
-                  setModalVisible(!modalVisible);
-                }}
-              >
-                <Text style={{ color: 'white', fontWeight: 600, fontFamily: 'Nunito-SemiBold' }}>Continue</Text>
-              </Pressable>
-            </View>
+          </View>
+          <View style={styles.ButtonTop}>
+            <Pressable
+              style={{
+                backgroundColor: '#347B72',
+                borderRadius: 10,
+                padding: 12,
+                alignItems: 'center',
+              }}
+              onPress={() => {
+                navigation.navigate("OTPScreen");
+                setModalVisible(!modalVisible);
+              }}
+            >
+              <Text style={{ color: 'white', fontWeight: 600, fontFamily: 'Nunito-SemiBold' }}>Continue</Text>
+            </Pressable>
           </View>
         </ModalContent>
       </BottomModal>
@@ -194,6 +205,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 68,
+    
   },
   SearchBarInput: {
     borderColor: '#CBCDCD',
@@ -205,7 +217,7 @@ const styles = StyleSheet.create({
     padding: 10,
     height: 52,
     gap: 12,
-    margin: 20,
+    width: screenWidth - 40,
 
   },
   TopNotify: {
@@ -227,9 +239,8 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   ButtonTop: {
-    height: 88,
     justifyContent: 'center',
-    marginTop: '10%',
-
+    margin: 10,
+    flex: 1
   },
 });
