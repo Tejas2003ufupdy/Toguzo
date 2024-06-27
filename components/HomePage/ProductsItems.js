@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-// import AppLoading from 'expo-app-loading'
+//import AppLoading from 'expo-app-loading'
 import { useFonts } from 'expo-font'
 
 const ProductsItems = () => {
