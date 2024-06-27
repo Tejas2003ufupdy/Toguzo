@@ -1,5 +1,6 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import MyGroups from '../../screens/MainPages/MyGroups'
 import UserHeart from "../../assets/images/Mainpage/UserHeart.svg"
 import Trends from "../../assets/images/Mainpage/Trends.svg"
 
@@ -9,20 +10,20 @@ const FilterSection = () => {
       showsHorizontalScrollIndicator={false}>
       <Pressable style={styles.container}>
         <View style={styles.contains}>
-          <UserHeart />
-          <Text style={{fontSize:14, fontWeight: 600, fontFamily: "Nunito-SemiBold"}}>Group Buy</Text>
+          <MyGroups />
+          <Text style={{ fontSize: 14, fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Group Buy</Text>
         </View>
         <View style={styles.contains}>
           <UserHeart />
-          <Text style={{fontSize:14, fontWeight: 600, fontFamily: "Nunito-SemiBold"}}>Product for you</Text>
+          <Text style={{ fontSize: 14, fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Product for you</Text>
         </View>
         <View style={styles.contains}>
           <Trends />
-          <Text style={{fontSize:14, fontWeight: 600, fontFamily: "Nunito-SemiBold"}}>Trends</Text>
+          <Text style={{ fontSize: 14, fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Trends</Text>
         </View>
         <View style={styles.contains}>
           <UserHeart />
-          <Text style={{fontSize:14, fontWeight: 600, fontFamily: "Nunito-SemiBold"}}>Most Bought</Text>
+          <Text style={{ fontSize: 14, fontWeight: 600, fontFamily: "Nunito-SemiBold" }}>Most Bought</Text>
         </View>
         <View style={styles.contains}>
           <UserHeart />
