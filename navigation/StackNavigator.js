@@ -1,3 +1,4 @@
+/** whole apps navigation file */
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { TailwindProvider } from 'tailwindcss-react-native';
