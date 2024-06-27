@@ -1,4 +1,3 @@
-/** whole apps navigation file */
 import React from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native'
