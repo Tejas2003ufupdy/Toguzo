@@ -90,7 +90,7 @@ const StackNavigator = () => {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="white" barStyle="dark-content" /> 
-      <TailwindProvider>
+      
         <Stack.Navigator initialRouteName='Main'>
           <Stack.Screen name="Main" component={BottomTabs} options={{ headerShown: false }} />
           <Stack.Screen name="AccountCreate" component={Accountcreate} options={{ headerShown: true, headerTitle: ''  }}/> 
@@ -100,7 +100,7 @@ const StackNavigator = () => {
           <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: true }}/>
           <Stack.Screen name="FAQs" component={FAQs} options={{ headerShown: true }}/>
         </Stack.Navigator>
-      </TailwindProvider>
+      
     </NavigationContainer>
   )
 }
