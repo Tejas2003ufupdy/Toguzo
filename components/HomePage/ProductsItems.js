@@ -8,7 +8,7 @@ const ProductsItems = () => {
     'Nunito-Bold': require('../../assets/fonts/Nunito-Bold.ttf'),
   })
 
- if(!fontsLoaded){
+if(!fontsLoaded){
      return <AppLoading/>
  }
   return (
