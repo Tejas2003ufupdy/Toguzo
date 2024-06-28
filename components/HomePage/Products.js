@@ -1,7 +1,7 @@
 import { Pressable, ScrollView, StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import favicon from '../../assets/favicon.png'
-
+import { scale } from 'react-native-size-matters'
 
 const Products = () => {
   const list = [
@@ -56,12 +56,12 @@ const Products = () => {
     <ScrollView horizontal showsHorizontalScrollIndicator={false}>
       <View style={styles.Products}>
         {list.map((item, index) => (
-          <Pressable key={index} style={{marginLeft: 20, justifyContent:'center', alignItems:'center', width: 60, height:82}}>
+          <Pressable key={index} style={{ marginLeft: 10, justifyContent: 'center', alignItems: 'center', width: 60, height: 82, }}>
             <View >
-              <Image source={item.img} 
-              style={styles.productview}/>
+              <Image source={item.img}
+                style={styles.productview} />
             </View>
-            <Text numberOfLines={1} style={{textAlign:'center', fontSize: 12, fontWeight: 600, marginTop: 1}}>{item.name}</Text>
+            <Text numberOfLines={1} style={{ textAlign: 'center', fontSize: 12, fontWeight: 600, marginTop: 1 }}>{item.name}</Text>
           </Pressable>
         ))}
       </View>
@@ -77,7 +77,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 98,
-    flexDirection: 'row',  
+    flexDirection: 'row',
+    width: scale(-80),
+    paddingEnd: 20,
+    paddingStart:10
+    
+    
   },
   productview: {
     alignItems: 'center',
@@ -85,9 +90,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 0,
     width: 60,
     height: 60,
-    borderRadius: 50,
+    borderRadius: 32,
     borderWidth: 1,
     borderColor: '#CBCDCD',
+    
   },
   ProductImage: {
     borderRadius: 50,
