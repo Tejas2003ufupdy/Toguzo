@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View, Pressable, TextInput } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import MailIcon from '../../../assets/images/Homepage/ModalScreen/MailIcon.svg'
+import MaleIcon from '../../../assets/images/Homepage/ModalScreen/Male Icon.svg'
+import FemaleIcon from '../../../assets/images/Homepage/ModalScreen/Female Icon.svg'
 
 const Accountcreate = () => {
-
+  const [selectgender, setSelectgender] = useState(null)
   const navigation = useNavigation();
   return (
     <View style={{ flex: 1, backgroundColor: "white", }}>
@@ -14,12 +16,14 @@ const Accountcreate = () => {
           <Text style={{ fontWeight: 600, fontSize: 20 }}>Gender</Text>
 
           <View style={styles.gender}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around", borderBottomWidth: 1, borderColor: '#CBCDCD', borderWidth: 2, }}>
-              <Text style={{ fontSize: 16, color: '#212121' }}>Male</Text>
-            </View>
-            <View style={{ borderBottomWidth: 1, borderColor: '#CBCDCD', borderWidth: 2, alignItems: "center" }}>
-              <Text style={{ fontSize: 16, color: '#212121' }}>Female</Text>
-            </View>
+            <Pressable style={styles.maleContain}>
+              < MaleIcon />
+              <Text style={{ fontSize: 16, color: '#212121', fontWeight: 600 }}>Male</Text>
+            </Pressable>
+            <Pressable style={styles.femalecontain}>
+              < FemaleIcon />
+              <Text style={{ fontSize: 16, color: '#212121', fontWeight: 600 }}>Female</Text>
+            </Pressable>
           </View>
           <View style={{ marginTop: 24 }}>
             <Text style={{ fontSize: 20, color: '#212121', fontWeight: 600 }}>What Should We Call You?</Text>
@@ -28,7 +32,8 @@ const Accountcreate = () => {
                 placeholder="Enter Your Name"
                 style={{ flex: 1, fontWeight: 'normal' }}
                 placeholderTextColor={'#7C7E7E'}
-              /></View>
+              />
+            </View>
           </View>
           <View style={{ marginTop: 24 }}>
             <Text style={{ fontSize: 20, color: '#212121', fontWeight: 600 }}>Email</Text>
@@ -41,13 +46,15 @@ const Accountcreate = () => {
               /></View>
           </View>
         </View>
+      </View>
+      <View style={{ justifyContent: 'flex-end', margin: 20, flex: 1 }}>
         <Pressable
           style={{
             backgroundColor: '#347B72',
             borderRadius: 10,
             padding: 12,
             alignItems: 'center',
-            marginTop: '100%'
+            marginBottom: 24
           }}
           onPress={() => {
             navigation.navigate("Main");
@@ -72,13 +79,35 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 8,
     height: 52,
-    gap: 12,
+    gap: 12
   },
   gender: {
-    alignItems: 'center',
     flexDirection: 'row',
     marginTop: 24,
-    borderWidth: 2,
-    gap: 20
+    gap: 16,
+  },
+  maleContain: {
+    flexDirection: "row",
+    borderColor: '#CBCDCD',
+    borderWidth: 1,
+    width: 167,
+    height: 48,
+    justifyContent: 'center',
+    alignItems: "center",
+    flex: 1,
+    borderRadius: 10,
+    gap: 8
+  },
+  femalecontain: {
+    flexDirection: "row", 
+    borderColor: '#CBCDCD', 
+    borderWidth: 1, 
+    alignItems: "center", 
+    width: 167, 
+    height: 48, 
+    justifyContent: 'center', 
+    flex: 1, 
+    borderRadius: 10, 
+    gap: 8
   }
 })
