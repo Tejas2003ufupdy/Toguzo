@@ -24,7 +24,7 @@ import Accountcreate from '../screens/HomePages/Modal/Accountcreate'
 import RegisterScreen from '../screens/HomePages/Modal/RegisterScreen'
 import SplashScreen from '../components/Splash/SplashScreen';
 import Profilepage from '../screens/Morepages/Profilepage'
-import FAQs from "../components/Morepage/FAQs"
+import FAQs from '../components/Morepage/FAQs'
 
 
 
@@ -114,7 +114,7 @@ const StackNavigator = () => {
               tabBarLabel: ({ focused }) => (
                 <Text style={{ fontSize: 10, color: focused ? "#347B72" : "#636767" }}>More</Text>
               ),
-              headerShown: true,
+              headerShown: false,
               tabBarIcon: ({ focused }) =>
                 focused ? (
                   <MoreIconActive name="More" width={24} />
