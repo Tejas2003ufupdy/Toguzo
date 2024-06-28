@@ -179,16 +179,6 @@ const styles = StyleSheet.create({
 	},
 })
 
-// marginTop:10,
-// 		paddingTop: 8,
-// 		paddingRight: 12,
-// 		paddingBottom: 8,
-// 		paddingLeft: 16,
-// 		flexDirection: "row",
-// 		justifyContent: "space-between",
-// 		borderBottomWidth: 2,
-// 		borderBottomColor:"#DDDDDD"
-
 
 
 				
