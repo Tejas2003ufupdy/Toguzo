@@ -41,7 +41,8 @@ const More = () => {
 						borderRadius: 10,
 						padding: 12,
 						alignItems: 'center',
-						marginTop: 10
+						marginTop: 10,
+						height:48
 					}}
 					>
 					<Text style={{ color: 'white', fontWeight: 600 }}>Login</Text>
