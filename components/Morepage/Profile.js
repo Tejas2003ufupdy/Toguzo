@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, SafeAreaView,Pressable, ScrollView } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 import RightArrow from "../../assets/images/Morepage/rightarrow.svg"
 import ShippingIcon from "../../assets/images/Morepage/shippingBox.svg"
 import WishListIcon from "../../assets/images/Mainpage/Wishlist.svg"
@@ -8,8 +9,10 @@ import HelpCenterIcon from "../../assets/images/Morepage/helpCenterIcon.svg"
 import UPIicon from "../../assets/images/Morepage/UPIicon.svg"
 import AddressIcon from "../../assets/images/Morepage/adderssIcon.svg"
 import SettingIcon from "../../assets/images/Morepage/settingIcon.svg"
+import Profilepage from "../../screens/Morepages/Profilepage"
 
 const Profile = () => {
+	const navigation = useNavigation();
 	return (
 		<SafeAreaView>
 			<ScrollView>
@@ -24,7 +27,7 @@ const Profile = () => {
 							<Text style={{ color: "#7C7E7E", fontSize: 16, fontWeight: 600 }}>kayalvizhi321@gmail.com</Text>
 						</View>
 					</View>
-					<RightArrow />
+					<Pressable><RightArrow onPress={() => navigation.navigate("Profilepage")} style={{width:40,height:40}} /></Pressable>
 				</View>
 
 				{/**order,wishlist,help,coupons section */}

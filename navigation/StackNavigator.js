@@ -23,6 +23,7 @@ import OTPScreen from '../screens/HomePages/Modal/OTPScreen'
 import Accountcreate from '../screens/HomePages/Modal/Accountcreate'
 import RegisterScreen from '../screens/HomePages/Modal/RegisterScreen'
 import FAQs from "../components/Morepage/FAQs"
+import Profilepage from '../screens/Morepages/Profilepage'
 
 
 const StackNavigator = () => {
@@ -98,6 +99,7 @@ const StackNavigator = () => {
           <Stack.Screen name="Wishlist" component={Wishlist} options={{ headerShown: true }}/>
           <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: true }}/>
           <Stack.Screen name="FAQs" component={FAQs} options={{ headerShown: true }}/>
+          <Stack.Screen name="Profilepage" component={Profilepage} options={{ headerShown: true }}/>
         </Stack.Navigator>
       
     </NavigationContainer>
