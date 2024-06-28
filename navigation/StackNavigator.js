@@ -23,6 +23,11 @@ import OTPScreen from '../screens/HomePages/Modal/OTPScreen'
 import Accountcreate from '../screens/HomePages/Modal/Accountcreate'
 import RegisterScreen from '../screens/HomePages/Modal/RegisterScreen'
 import SplashScreen from '../components/Splash/SplashScreen';
+import Profilepage from '../screens/Morepages/Profilepage';
+import FAQs from '../components/Morepage/FAQs';
+
+
+
 
 
 
@@ -111,7 +116,8 @@ const StackNavigator = () => {
               tabBarLabel: ({ focused }) => (
                 <Text style={{ fontSize: 10, color: focused ? "#347B72" : "#636767" }}>More</Text>
               ),
-              headerShown: true,
+              headerShown: false,
+
               tabBarIcon: ({ focused }) =>
                 focused ? (
                   <MoreIconActive name="More" width={24} />
@@ -155,6 +161,9 @@ const StackNavigator = () => {
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: true }} />
         <Stack.Screen name="Wishlist" component={Wishlist} options={{ headerShown: true }} />
         <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: true }} />
+        <Stack.Screen name="Profilepage" component={Profilepage} options={{ headerShown: true }} />
+        <Stack.Screen name="FAQs" component={FAQs} options={{ headerShown: true }} />
+
       </Stack.Navigator>
     </NavigationContainer>
   )
